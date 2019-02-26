@@ -63,6 +63,19 @@ class App extends Component {
   }
 
   render() {
+    const appStyle = {
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100%',
+      backgroundImage: "url('https://www.pixelstalk.net/wp-content/uploads/2015/11/Game-of-Thrones-Desktop-Background-1920x1080.jpg')"
+    }
+
+    const buttonStyle = {
+      height: '30px',
+      width: '50px',
+      borderRadius: '15px'
+    }
+
     let content = null;
     if (this.state.display < 4){
       content = <Question 
@@ -83,9 +96,9 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className="App" style={appStyle}>
+        <button onClick={this.reset} style={buttonStyle}>Reset</button>
         {content}
-        <button onClick={this.reset}>Reset</button>
       </div>
     );
   }
