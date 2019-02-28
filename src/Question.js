@@ -21,11 +21,14 @@ function Question (props) {
   const divStyle = {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'spaceAround',
-    width: '500px',
-    height: '900px',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    width: '60rem',
+    height: '50%',
     borderRadius: '10px',
-    color: 'white'
+    color: 'white',
+    marginTop: '5rem',
+    fontFamily: 'Merriweather'
   }
 
   const itemStyle = {
@@ -33,9 +36,13 @@ function Question (props) {
   }
 
   const imgStyle = {
-    borderRadius: '10px',
-    maxWidth: '200px',
-    maxHeight: '200px'
+    borderRadius: '75px',
+    width: '200px',
+    height: '200px'
+  }
+
+  const pStyle = {
+    fontSize: '1.5rem'
   }
 
   return(
@@ -45,28 +52,28 @@ function Question (props) {
             theClickFunction1();            
         }}
         style={itemStyle}>
-      <p>{props.question.choices[0].name}</p>
+      <p style={pStyle}>{props.question.choices[0].name}</p>
       <img src={props.question.choices[0].img} style={imgStyle} alt="Person 1"/>
     </div>
     <div onClick={()=>{
             theClickFunction2();            
         }}
         style={itemStyle}>
-    <p>{props.question.choices[1].name}</p>
+    <p style={pStyle}>{props.question.choices[1].name}</p>
       <img src={props.question.choices[1].img} style={imgStyle} alt="Person 2"/>
     </div>
     <div onClick={()=>{
             theClickFunction3();            
         }}
         style={itemStyle}>
-      <p>{props.question.choices[2].name}</p>
+      <p style={pStyle}>{props.question.choices[2].name}</p>
       <img src={props.question.choices[2].img} style={imgStyle} alt="Person"/>
     </div>
     <div onClick={()=>{
             theClickFunction4();            
         }}
         style={itemStyle}>
-      <p>{props.question.choices[3].name}</p>
+      <p style={pStyle}>{props.question.choices[3].name}</p>
       <img src={props.question.choices[3].img} style={imgStyle} alt="Ned"/>
     </div>
     </div>

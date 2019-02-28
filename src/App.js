@@ -67,13 +67,23 @@ class App extends Component {
       display: 'flex',
       justifyContent: 'center',
       width: '100%',
+      height: '950px',
       backgroundImage: "url('https://www.pixelstalk.net/wp-content/uploads/2015/11/Game-of-Thrones-Desktop-Background-1920x1080.jpg')"
     }
 
     const buttonStyle = {
-      height: '30px',
-      width: '50px',
-      borderRadius: '15px'
+      height: '4rem',
+      width: '4rem',
+      borderRadius: '10%',
+      color: 'white',
+      backgroundColor: 'gray',
+      marginLeft: '2rem'
+    }
+
+    const endStyle = {
+      color: 'white',
+      fontSize: '3rem',
+      textAlign: 'center'
     }
 
     let content = null;
@@ -85,19 +95,18 @@ class App extends Component {
       />
     } else {
       if (this.state.a === 4){
-        content = <h1>You have survived all the way until season 8! Good luck!</h1>
+        content = <h1 style={endStyle}>You have survived all the way until season 8! Good luck!<br></br><button onClick={this.reset} style={buttonStyle}>Play Again</button></h1>
       } else if (this.state.a === 3){
-        content = <h1>'Good job, you died in season 6!'</h1>
+        content = <h1 style={endStyle}>'Good job, you died in season 6!'<br></br><button onClick={this.reset} style={buttonStyle}>Reset</button></h1>
       } else if (this.state.a === 2){
-        content = <h1>Not bad, you died in season 4!</h1>
+        content = <h1 style={endStyle}>Not bad, you died in season 4!<br></br><button onClick={this.reset} style={buttonStyle}>Reset</button></h1>
       } else if (this.state.a === 1){
-        content = <h1>You died in season 2.</h1>
-      } else content = <h1>You died in season 1.</h1>
+        content = <h1 style={endStyle}>You died in season 2.<br></br><button onClick={this.reset} style={buttonStyle}>Reset</button></h1>
+      } else content = <h1 style={endStyle}>You died in season 1.<br></br><button onClick={this.reset} style={buttonStyle}>Reset</button></h1>
     }
 
     return (
       <div className="App" style={appStyle}>
-        <button onClick={this.reset} style={buttonStyle}>Reset</button>
         {content}
       </div>
     );
@@ -105,3 +114,5 @@ class App extends Component {
 }
 
 export default App;
+
+// https://www.pixelstalk.net/wp-content/uploads/2015/11/Game-of-Thrones-Desktop-Background-1920x1080.jpg
