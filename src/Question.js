@@ -23,12 +23,13 @@ function Question (props) {
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    width: '60rem',
+    width: '65rem',
     height: '50%',
     borderRadius: '10px',
     color: 'white',
     marginTop: '5rem',
-    fontFamily: 'Merriweather'
+    fontFamily: 'Merriweather',
+    fontSize: '1rem'
   }
 
   const itemStyle = {

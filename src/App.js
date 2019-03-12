@@ -67,7 +67,7 @@ class App extends Component {
       display: 'flex',
       justifyContent: 'center',
       width: '100%',
-      height: '950px',
+      height: '1000px',
       backgroundImage: "url('https://www.pixelstalk.net/wp-content/uploads/2015/11/Game-of-Thrones-Desktop-Background-1920x1080.jpg')"
     }
 
