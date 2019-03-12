@@ -43,7 +43,7 @@ function Question (props) {
   }
 
   const pStyle = {
-    fontSize: '1.5rem'
+    fontSize: '1.25rem'
   }
 
   return(
